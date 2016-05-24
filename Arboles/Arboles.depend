@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1382923387 source:c:\users\joel\desktop\arboles\main.cpp
+	<iostream>
+	"arbol.h"
+
+1382923436 c:\users\joel\desktop\arboles\arbol.h
+	"nodo_arbol.h"
+	<iostream>
+
+1382918035 c:\users\joel\desktop\arboles\nodo_arbol.h
+
+1383887018 source:c:\users\aleman\dropbox\programacion ii\arboles\main.cpp
+	<iostream>
+	"arbol.h"
+
+1383885924 c:\users\aleman\dropbox\programacion ii\arboles\arbol.h
+	"nodo_arbol.h"
+	<iostream>
+
+1383883028 c:\users\aleman\dropbox\programacion ii\arboles\nodo_arbol.h
+

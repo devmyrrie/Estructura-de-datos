@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1387562958 source:c:\users\joel\desktop\cola\main.cpp
+	<iostream>
+	"Cola.h"
+
+1387563004 c:\users\joel\desktop\cola\cola.h
+	"Node.h"
+
+1387562868 c:\users\joel\desktop\cola\node.h
+

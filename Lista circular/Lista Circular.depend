@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1387511979 source:c:\users\joel\desktop\lista circular\main.cpp
+	<iostream>
+	"List.h"
+	"Node.h"
+
+1387512208 c:\users\joel\desktop\lista circular\list.h
+	"Node.h"
+
+1387242829 c:\users\joel\desktop\lista circular\node.h
+

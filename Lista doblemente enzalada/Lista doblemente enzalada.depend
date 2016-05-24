@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1387472105 source:c:\users\joel\desktop\lista doblemente enzalada\main.cpp
+	<iostream>
+	"List.h"
+
+1387472127 c:\users\joel\desktop\lista doblemente enzalada\list.h
+	"Node.h"
+
+1387307520 c:\users\joel\desktop\lista doblemente enzalada\node.h
+

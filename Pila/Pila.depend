@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1377102756 source:c:\documents and settings\myrrie\mis documentos\progra ii\listas\pila\main.cpp
+	<iostream>
+	"Pila.h"
+
+1377103717 c:\documents and settings\myrrie\mis documentos\progra ii\listas\pila\pila.h
+
+1377103620 source:c:\documents and settings\myrrie\mis documentos\progra ii\listas\pila\pila.cpp
+	"Pila.h"
+	<iostream>
+
+1377109522 source:c:\documents and settings\myrrie\mis documentos\progra ii\memoria dinamica\pila\main.cpp
+	<iostream>
+	"Pila.h"
+
+1377103717 c:\documents and settings\myrrie\mis documentos\progra ii\memoria dinamica\pila\pila.h
+
+1377109888 source:c:\documents and settings\myrrie\mis documentos\progra ii\memoria dinamica\pila\pila.cpp
+	"Pila.h"
+	<iostream>
+
+1377193659 source:c:\users\administrador\desktop\pila\main.cpp
+	<iostream>
+	"Pila.h"
+
+1377193659 c:\users\administrador\desktop\pila\pila.h
+
+1377193763 source:c:\users\administrador\desktop\pila\pila.cpp
+	"Pila.h"
+	<iostream>
+
+1377212865 source:c:\documents and settings\myrrie\escritorio\practica actualizada\pila\pila.cpp
+	"Pila.h"
+	<iostream>
+
+1377212891 c:\documents and settings\myrrie\escritorio\practica actualizada\pila\pila.h
+
+1377212570 source:c:\documents and settings\myrrie\escritorio\practica actualizada\pila\main.cpp
+	<iostream>
+	"Pila.h"
+
+1381103337 source:c:\users\joel\dropbox\universidad\trabajos c++\practica memoria dinamica\practica actualizada\pila\main.cpp
+	<iostream>
+	"Pila.h"
+
+1381103338 c:\users\joel\dropbox\universidad\trabajos c++\practica memoria dinamica\practica actualizada\pila\pila.h
+
+1381103338 source:c:\users\joel\dropbox\universidad\trabajos c++\practica memoria dinamica\practica actualizada\pila\pila.cpp
+	"Pila.h"
+	<iostream>
+

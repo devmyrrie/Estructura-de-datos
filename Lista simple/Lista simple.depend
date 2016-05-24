@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1387245205 source:c:\users\joel\desktop\lista simple\main.cpp
+	<iostream>
+	"List.h"
+	"Node.h"
+
+1387245535 c:\users\joel\desktop\lista simple\list.h
+	"Node.h"
+
+1387242829 c:\users\joel\desktop\lista simple\node.h
+

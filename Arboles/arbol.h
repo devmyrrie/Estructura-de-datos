@@ -1,0 +1,256 @@
+#ifndef ARBOL_H
+#define ARBOL_H
+#include "nodo_arbol.h"
+#include <iostream>
+using namespace std;
+
+template <typename data_type>
+class arbol
+{
+private:
+    nodo_arbol< data_type > *raiz_ptr;
+
+
+public:
+    arbol()
+        :raiz_ptr(0) {}
+
+    void insertar_nodo( const data_type &e )
+    {
+        ayudante_insertar_nodo(&raiz_ptr, e);
+    }
+
+    void recorrer_postorden()
+    {
+        ayudante_postorden(raiz_ptr);
+
+    }
+
+    void recorrer_preorden()
+    {
+        ayudante_preorden(raiz_ptr);
+
+    }
+
+    void recorrer_inorden()
+    {
+        ayudante_inorden(raiz_ptr);
+
+    }
+    void ascendente()
+    {
+        ayudante_inorden(raiz_ptr);
+
+    }
+
+    void descendente()
+    {
+        ayudante_descendente(raiz_ptr);
+
+    }
+
+    void borrar_nodo(const data_type &e)
+    {
+
+        ayudante_borrar_nodo(&raiz_ptr, e);
+
+
+    }
+private:
+    void ayudante_insertar_nodo(nodo_arbol<data_type>** ptr,const data_type& e)
+    {
+
+        if(*ptr == 0)
+        {
+            *ptr= new nodo_arbol<data_type>(e);
+        }
+        else
+        {
+            if(e <  ( (*ptr)->data))
+            {
+                ayudante_insertar_nodo(&(*ptr)->izq,e);
+
+            }
+            else
+            {
+
+                if(e>( (*ptr)->data))
+                {
+
+                    ayudante_insertar_nodo(&(*ptr)->der,e);
+
+                }
+
+            }
+        }
+
+    }
+
+    void ayudante_postorden(nodo_arbol<data_type>* ptr)
+    {
+
+        if(ptr != NULL)
+        {
+            ayudante_postorden(ptr->izq);
+
+            ayudante_postorden(ptr->der);
+
+            cout<<ptr->data<<endl;
+
+        }
+
+
+    }
+
+    void ayudante_preorden(nodo_arbol<data_type>* ptr)
+    {
+
+        if(ptr != NULL)
+        {
+            cout<<ptr->data<<endl;
+
+            ayudante_preorden(ptr->izq);
+
+            ayudante_preorden(ptr->der);
+
+
+
+        }
+
+
+    }
+
+    void ayudante_inorden(nodo_arbol<data_type>* ptr)
+    {
+
+        if(ptr != NULL)
+        {
+
+            ayudante_inorden(ptr->izq);
+
+            cout<<ptr->data<<endl;
+
+
+            ayudante_inorden(ptr->der);
+
+
+
+        }
+
+
+    }
+
+    void ayudante_descendente(nodo_arbol<data_type>* ptr)
+    {
+
+        if(ptr != NULL)
+        {
+            ayudante_descendente(ptr->der);
+            cout<<ptr->data<<endl;
+            ayudante_descendente(ptr->izq);
+
+        }
+
+
+
+
+    }
+
+
+    void ayudante_borrar_nodo(nodo_arbol<data_type>** ptr, const data_type e)
+    {
+        if(*ptr == 0)
+        {
+            return;
+
+        }
+        if(e> (*ptr)->data)
+        {
+
+            ayudante_borrar_nodo(&((*ptr)->der),e );
+
+        }
+        else
+        {
+
+            if(e< (*ptr)->data)
+            {
+                ayudante_borrar_nodo(&((*ptr)->izq),e );
+
+            }
+            else
+            {
+
+                if(e == (*ptr)->data)
+                {
+
+                    if((*ptr)->izq==(*ptr)->der)
+                    {
+                        delete *ptr;
+                        *ptr=0;
+                    }
+                    else
+                    {
+
+                        if((*ptr)->izq != 0 && (*ptr)->der == 0)
+                        {
+                            nodo_arbol<data_type>* aux=*ptr;
+                            *ptr=(*ptr)->izq;
+                            delete aux;
+
+                        }
+                        else
+                        {
+                            if((*ptr)->izq == 0 && (*ptr)->der != 0)
+                            {
+                                nodo_arbol<data_type>* aux=*ptr;
+                                *ptr=(*ptr)->der;
+                                delete aux;
+
+                            }
+                            else
+                            {
+
+                                nodo_arbol<data_type>** mn=encontrar_min(&((*ptr)->der));
+                                (*ptr)->data=(*mn)->data;
+                                nodo_arbol<data_type>* aux =*mn;
+                                *mn=(*mn)->der;
+                                delete aux;
+                            }
+                        }
+
+                    }
+
+                }
+            }
+
+
+        }
+
+
+    }
+
+    nodo_arbol<data_type>** encontrar_min(nodo_arbol<data_type>** ptr)
+    {
+
+        if(*ptr == 0)
+        {
+            return 0;
+
+        }
+        if((*ptr)->izq == 0 )
+        {
+            return (ptr);
+        }
+        if((*ptr)->izq != 0 )
+        {
+            return encontrar_min(& ((*ptr)->izq));
+
+        }
+
+
+    }
+
+};
+
+#endif // ARBOL_H
